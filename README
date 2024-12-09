@@ -1,0 +1,14 @@
+### Description:
+// Pᴀɪʀɴɪx is a modern dating application and messaging service built using C# (API backend) and Angular (frontend)
+
+### Key Features:
+// - Real-time messaging
+// - Secure user authentication
+// - Profile customization with images and bios
+
+## Technologies Used:
+// - **Frontend**: Angular, TypeScript
+// - **Backend**: C#, .NET 
+// - **Database**: SQL / SQLite
+// - **Tools**: VS Code, C# Dev Kit, Swagger
+
