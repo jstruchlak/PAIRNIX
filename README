@@ -20,4 +20,7 @@
 -C# Dev Kit
 -Angular Snippets
 -.NET Install Tool
--SQLite
+-Nuget Gallery
+-Nuget > microsoft.entityframeworkcore.sql
+    a.adding = dotnet ef migrations add InitialCreate -o Data/Migrations
+    b.update = dotnet ef database update
