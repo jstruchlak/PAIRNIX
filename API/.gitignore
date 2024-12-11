@@ -1,8 +1,0 @@
-node_modules/
-bin/
-obj/
-.vscode/
-dist/
-*.log
-*.user
-*.suo
