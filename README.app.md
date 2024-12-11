@@ -15,13 +15,13 @@
 **Database**: SQL / SQLite
 **Tools**: VS Code, C# Dev Kit, Swagger
 
-# Extensions + Packages
+# Extensions + Packages:
 
 -C# Dev Kit
 -Angular Snippets
 -.NET Install Tool
 -Nuget Gallery
 -Nuget > microsoft.entityframeworkcore.sql
-    a.adding = dotnet ef migrations add InitialCreate -o Data/Migrations
-    b.update = dotnet ef database update
--Angular Language Service    
+a.adding = dotnet ef migrations add InitialCreate -o Data/Migrations
+b.update = dotnet ef database update
+-Angular Language Service
