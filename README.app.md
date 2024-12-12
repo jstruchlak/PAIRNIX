@@ -27,7 +27,10 @@ Pᴀɪʀɴɪx is a modern dating application and private messaging service built
 a.adding = dotnet ef migrations add InitialCreate -o Data/Migrations
 b.update = dotnet ef database update
 -Angular Language Service
+-System.Identity.Model.Tokens.Jwt
+-Microsoft.AspNetCore.Authentication.JwtBearer
 
 # NPM Packages:
 -Bootstrap
 -font-awesome
+
