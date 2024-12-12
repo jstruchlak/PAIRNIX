@@ -2283,6 +2283,9 @@ function popResultSelector(args) {
 function popScheduler(args) {
   return isScheduler(last(args)) ? args.pop() : void 0;
 }
+function popNumber(args, defaultValue) {
+  return typeof last(args) === "number" ? args.pop() : defaultValue;
+}
 
 // node_modules/rxjs/dist/esm5/internal/util/isArrayLike.js
 var isArrayLike = function(x) {
@@ -3036,6 +3039,119 @@ function defer(observableFactory) {
   return new Observable(function(subscriber) {
     innerFrom(observableFactory()).subscribe(subscriber);
   });
+}
+
+// node_modules/rxjs/dist/esm5/internal/observable/forkJoin.js
+function forkJoin() {
+  var args = [];
+  for (var _i = 0; _i < arguments.length; _i++) {
+    args[_i] = arguments[_i];
+  }
+  var resultSelector = popResultSelector(args);
+  var _a = argsArgArrayOrObject(args), sources = _a.args, keys = _a.keys;
+  var result = new Observable(function(subscriber) {
+    var length = sources.length;
+    if (!length) {
+      subscriber.complete();
+      return;
+    }
+    var values = new Array(length);
+    var remainingCompletions = length;
+    var remainingEmissions = length;
+    var _loop_1 = function(sourceIndex2) {
+      var hasValue = false;
+      innerFrom(sources[sourceIndex2]).subscribe(createOperatorSubscriber(subscriber, function(value) {
+        if (!hasValue) {
+          hasValue = true;
+          remainingEmissions--;
+        }
+        values[sourceIndex2] = value;
+      }, function() {
+        return remainingCompletions--;
+      }, void 0, function() {
+        if (!remainingCompletions || !hasValue) {
+          if (!remainingEmissions) {
+            subscriber.next(keys ? createObject(keys, values) : values);
+          }
+          subscriber.complete();
+        }
+      }));
+    };
+    for (var sourceIndex = 0; sourceIndex < length; sourceIndex++) {
+      _loop_1(sourceIndex);
+    }
+  });
+  return resultSelector ? result.pipe(mapOneOrManyArgs(resultSelector)) : result;
+}
+
+// node_modules/rxjs/dist/esm5/internal/observable/fromEvent.js
+var nodeEventEmitterMethods = ["addListener", "removeListener"];
+var eventTargetMethods = ["addEventListener", "removeEventListener"];
+var jqueryMethods = ["on", "off"];
+function fromEvent(target, eventName, options, resultSelector) {
+  if (isFunction(options)) {
+    resultSelector = options;
+    options = void 0;
+  }
+  if (resultSelector) {
+    return fromEvent(target, eventName, options).pipe(mapOneOrManyArgs(resultSelector));
+  }
+  var _a = __read(isEventTarget(target) ? eventTargetMethods.map(function(methodName) {
+    return function(handler) {
+      return target[methodName](eventName, handler, options);
+    };
+  }) : isNodeStyleEventEmitter(target) ? nodeEventEmitterMethods.map(toCommonHandlerRegistry(target, eventName)) : isJQueryStyleEventEmitter(target) ? jqueryMethods.map(toCommonHandlerRegistry(target, eventName)) : [], 2), add = _a[0], remove2 = _a[1];
+  if (!add) {
+    if (isArrayLike(target)) {
+      return mergeMap(function(subTarget) {
+        return fromEvent(subTarget, eventName, options);
+      })(innerFrom(target));
+    }
+  }
+  if (!add) {
+    throw new TypeError("Invalid event target");
+  }
+  return new Observable(function(subscriber) {
+    var handler = function() {
+      var args = [];
+      for (var _i = 0; _i < arguments.length; _i++) {
+        args[_i] = arguments[_i];
+      }
+      return subscriber.next(1 < args.length ? args : args[0]);
+    };
+    add(handler);
+    return function() {
+      return remove2(handler);
+    };
+  });
+}
+function toCommonHandlerRegistry(target, eventName) {
+  return function(methodName) {
+    return function(handler) {
+      return target[methodName](eventName, handler);
+    };
+  };
+}
+function isNodeStyleEventEmitter(target) {
+  return isFunction(target.addListener) && isFunction(target.removeListener);
+}
+function isJQueryStyleEventEmitter(target) {
+  return isFunction(target.on) && isFunction(target.off);
+}
+function isEventTarget(target) {
+  return isFunction(target.addEventListener) && isFunction(target.removeEventListener);
+}
+
+// node_modules/rxjs/dist/esm5/internal/observable/merge.js
+function merge() {
+  var args = [];
+  for (var _i = 0; _i < arguments.length; _i++) {
+    args[_i] = arguments[_i];
+  }
+  var scheduler = popScheduler(args);
+  var concurrent = popNumber(args, Infinity);
+  var sources = args;
+  return !sources.length ? EMPTY : sources.length === 1 ? innerFrom(sources[0]) : mergeAll(concurrent)(from(sources, scheduler));
 }
 
 // node_modules/rxjs/dist/esm5/internal/observable/never.js
@@ -24134,6 +24250,7 @@ export {
   ConnectableObservable,
   Subject,
   BehaviorSubject,
+  animationFrameScheduler,
   EMPTY,
   from,
   of,
@@ -24146,6 +24263,9 @@ export {
   mergeAll,
   concat,
   defer,
+  forkJoin,
+  fromEvent,
+  merge,
   filter,
   catchError,
   concatMap,
@@ -24657,4 +24777,4 @@ export {
    * found in the LICENSE file at https://angular.io/license
    *)
 */
-//# sourceMappingURL=chunk-5FUJWLSI.js.map
+//# sourceMappingURL=chunk-WIWNRFFG.js.map
