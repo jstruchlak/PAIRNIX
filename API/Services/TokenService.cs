@@ -12,20 +12,20 @@ public class TokenService(IConfiguration config) : ITokenService
 {
     public string CreateToken(AppUser user)
     {
-        var tokenKey = config["TokenKey"] ?? throw  new Exception("Cannot access tokenkey from appsettings");
+        var tokenKey = config["TokenKey"] ?? throw new Exception("Cannot access tokenkey from appsettings");
         if (tokenKey.Length < 64) throw new Exception("Token needs to be longer");
 
         // system.model.jwt package 
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(tokenKey));
 
-        var claims = new List<Claim> 
+        var claims = new List<Claim>
         {
             new (ClaimTypes.NameIdentifier, user.UserName)
         };
 
         var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
 
-        var tokenDescriptor = new SecurityTokenDescriptor 
+        var tokenDescriptor = new SecurityTokenDescriptor
         {
             Subject = new ClaimsIdentity(claims),
             Expires = DateTime.UtcNow.AddDays(7),
@@ -36,6 +36,6 @@ public class TokenService(IConfiguration config) : ITokenService
         var token = tokenHandler.CreateToken(tokenDescriptor);
 
         return tokenHandler.WriteToken(token);
-        
+
     }
 }
