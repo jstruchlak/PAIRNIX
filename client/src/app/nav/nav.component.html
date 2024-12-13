@@ -1,46 +1,40 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">Pᴀɪʀɴɪx</a>
-      
-      <ul class="navbar-nav me-auto mb-2 mb-md-0" *ngIf="loggedIn">
-        <li class="nav-item">
-          <a class="nav-link">Matches</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link">Lists</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link">Messages</a>
-        </li>
-      </ul>
-      
-      // add dropedown with 'Directives'(dropdownToggle, *dropdownMenu)
-
-      <div dropdown class="dropdown" *ngIf="loggedIn">
-        <a dropdownToggle class="dropdown-toggle text-light text-decoration-none">Welcome user</a>
-        <div *dropdownMenu class="dropdown-menu">
-          <a class="dropdown-item">Edit Profile</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" (click)="logout()">Logout</a>
+  <div class="container">
+    <a class="navbar-brand" href="#">Pᴀɪʀɴɪx</a>
+    <!-- Show links if user is logged in -->
+    <ul class="navbar-nav mr-auto" *ngIf="accountService.currentUser()">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Matches</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Lists</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Messages</a>
+      </li>
+    </ul>
+    <!-- Dropdown for logged-in user -->
+    <div class="dropdown" *ngIf="accountService.currentUser()" dropdown>
+      <a class="dropdown-toggle text-light" dropdownToggle>
+        Welcome {{ accountService.currentUser()?.username }}
+      </a>
+      <div class="dropdown-menu mt-3" *dropdownMenu>
+        <a class="dropdown-item">Edit Profile</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" (click)="logout()">Logout</a>
+      </div>
+    </div>
+    <!-- Login form for guest users -->
+    <form *ngIf="!accountService.currentUser()" #loginForm="ngForm" class="mt-2 mt-md-0" (ngSubmit)="login()" autocomplete="off">
+      <div class="input-group">
+        <input name="username" [(ngModel)]="model.username" class="form-control rounded-3 mr-2" type="text" placeholder="Username" />
+        <input name="password" [(ngModel)]="model.password" class="form-control rounded-3" type="password" placeholder="Password" />
+        <div class="input-group-append">
+          <button class="btn btn-outline-info" type="submit">Login</button>
         </div>
       </div>
-  
-      <form #loginForm="ngForm" (ngSubmit)="login()" class="d-flex" *ngIf="!loggedIn">
-        <input
-          name="username"
-          [(ngModel)]="model.username"
-          class="form-control me-2"
-          placeholder="Username"
-        />
-        <input
-          name="password"
-          [(ngModel)]="model.password"
-          class="form-control me-2"
-          placeholder="Password"
-          type="password"
-        />
-        <button class="btn btn-outline-info" type="submit">Login</button>
-      </form>
-    </div>
-  </nav>
-  
+    </form>
+    
+    
+  </div>
+</nav>
