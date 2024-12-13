@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { AccountService } from '../services/account.service';
+import { AccountService } from '../../services/account.service';
 import { NgIf } from '@angular/common';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown'
 
