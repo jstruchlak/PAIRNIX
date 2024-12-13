@@ -18,3 +18,6 @@
 2.Angular Config New Application
 3.Adding NPM packages (bootstrap + font-awesome)
 4.Using Angular HTTP Client Service
+5.Using Angular Template Forms
+6.Understanding Pipes and Observables
+7.Component communication - Input, Output (child-parent, parent-child)
