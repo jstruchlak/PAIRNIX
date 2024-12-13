@@ -2,8 +2,8 @@
 Pᴀɪʀɴɪx is a modern dating application and private messaging service built using C# (API backend) and Angular (frontend)
 
 # Requirements:
--Users should be able to login
--Users should be able to register
+-Users should be able to securely login
+-Users should be able to securely register
 -Users should be able to view other users
 -Users should be able to privately message other users
 
