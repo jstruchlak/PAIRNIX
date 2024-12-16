@@ -2,7 +2,7 @@ import {
   AnimationBuilder,
   animate,
   style
-} from "./chunk-4MS6PT4C.js";
+} from "./chunk-CXABJPPS.js";
 import {
   CommonModule,
   DOCUMENT,

@@ -33,4 +33,6 @@ b.update = dotnet ef database update
 # NPM Packages:
 -Bootstrap
 -font-awesome
+-ngx-toastr
+-bootswatch
 
