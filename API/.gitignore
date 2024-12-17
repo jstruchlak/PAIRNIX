@@ -1,2 +1,24 @@
-API/obj/
-API/bin/
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+
+# ASP.NET Core
+bin/
+obj/
+
+# Logs
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE/editor folders
+.vscode/
+.idea/
+
+# Environment variables
+.env

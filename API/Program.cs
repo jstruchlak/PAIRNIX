@@ -1,4 +1,5 @@
 using API.Extensions;
+using API.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +10,7 @@ var app = builder.Build();
 
 
 // Configure the HTTP request pipeline - Middleware
+app.UseMiddleware<ExceptionMiddleware>();
 app.UseCors("AllowSpecificOrigins");
 
 app.UseAuthentication();
