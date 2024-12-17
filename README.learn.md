@@ -21,3 +21,8 @@
 5.Using Angular Template Forms
 6.Understanding Pipes and Observables
 7.Component communication - Input, Output (child-parent, parent-child)
+8.Angular Routing
+9.Adding Bootstrap Themes
+10.Using Angular Route Guards
+11.Angular Error 'Interceptors'
+12.Graceful Troubleshooting/Error Handling
