@@ -150,3 +150,4 @@ C:\LEARNING WORKSPACE\Pᴀɪʀɴɪx\API\bin\Debug\net9.0\Microsoft.AspNetCore.Au
 C:\LEARNING WORKSPACE\Pᴀɪʀɴɪx\API\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
 C:\LEARNING WORKSPACE\Pᴀɪʀɴɪx\API\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\LEARNING WORKSPACE\Pᴀɪʀɴɪx\API\bin\Debug\net9.0\Data\UserSeedData.json
+C:\LEARNING WORKSPACE\Pᴀɪʀɴɪx\API\bin\Debug\net9.0\AutoMapper.dll
