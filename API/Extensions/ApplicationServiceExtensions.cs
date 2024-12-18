@@ -2,6 +2,7 @@ using System;
 using API.Data;
 using API.Interfaces;
 using API.Services;
+using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 
 namespace API.Extensions;
@@ -35,7 +36,8 @@ public static class ApplicationServiceExtensions
 
         // REPOSITORIES
         services.AddScoped<IUserRepository, UserRepository>();
-
+        // HELPER
+        services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         return services;
     }
 }

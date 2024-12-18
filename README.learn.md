@@ -12,10 +12,13 @@
 9.Using Services in C#
 10.Middleware Sequencing (Program.cs)
 11.Extension Methods - D.R.Y (Leaning up Program.cs)
-12.EF Migrations
+12.Entity Framework Migrations
     a. add -> New Terminal > API > 'dotnet ef migrations add UpdateUserEntity'
     a. remove -> New Terminal > API > 'dotnet ef migrations remove'
-    
+13.Entity Framework Conventions
+14.Seeding Data into DB
+15.Using the 'Repository' Pattern
+16.Using AutoMapper    
 
 # (Angular)
 1.Using Angular CLI
