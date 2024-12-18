@@ -33,6 +33,9 @@ public static class ApplicationServiceExtensions
         // JWT
         services.AddScoped<ITokenService, TokenService>();
 
+        // REPOSITORIES
+        services.AddScoped<IUserRepository, UserRepository>();
+
         return services;
     }
 }
