@@ -32,8 +32,9 @@ Pᴀɪʀɴɪx is a modern dating application and private messaging service built
 -autoMapper 
 
 # NPM Packages:
--Bootstrap
+-Bootstrap + Bootstrap/tabs
 -font-awesome
 -ngx-toastr
 -bootswatch
+-ng-gallery
 
