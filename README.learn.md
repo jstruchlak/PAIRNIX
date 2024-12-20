@@ -1,6 +1,7 @@
 ### LEARNING GOALS
 
 # (.NET)
+
 1.Using dotnet CLI
 2.API Controllers and Endpoints
 3.Entity Framework
@@ -13,14 +14,15 @@
 10.Middleware Sequencing (Program.cs)
 11.Extension Methods - D.R.Y (Leaning up Program.cs)
 12.Entity Framework Migrations
-    a. add -> New Terminal > API > 'dotnet ef migrations add UpdateUserEntity'
-    a. remove -> New Terminal > API > 'dotnet ef migrations remove'
+a. add -> New Terminal > API > 'dotnet ef migrations add UpdateUserEntity'
+a. remove -> New Terminal > API > 'dotnet ef migrations remove'
 13.Entity Framework Conventions
 14.Seeding Data into DB
 15.Using the 'Repository' Pattern
-16.Using AutoMapper    
+16.Using AutoMapper
 
 # (Angular)
+
 1.Using Angular CLI
 2.Angular Config New Application
 3.Adding NPM packages (bootstrap + font-awesome)
@@ -33,3 +35,8 @@
 10.Using Angular Route Guards
 11.Angular Error 'Interceptors'
 12.Graceful Troubleshooting/Error Handling
+
+# Database
+
+1.SQLite
+2.D-Beaver Database Managment Tool
