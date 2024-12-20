@@ -35,6 +35,8 @@ a. remove -> New Terminal > API > 'dotnet ef migrations remove'
 10.Using Angular Route Guards
 11.Angular Error 'Interceptors'
 12.Graceful Troubleshooting/Error Handling
+13.3rd Party Photo Gallery (ng-gallery)
+14.Using Route Parameters
 
 # Database
 
