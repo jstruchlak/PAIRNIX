@@ -16,7 +16,7 @@ Pᴀɪʀɴɪx is a modern dating application and private messaging service built
 **Frontend**: Angular, TypeScript
 **Backend**: C#, .NET
 **Database**: SQL / SQLite
-**Tools**: VS Code, C# Dev Kit, Swagger
+**Tools**: VS Code, C# Dev Kit, Swagger, D-Beaver DB Manager
 
 # Nuget Packages:
 -C# Dev Kit
