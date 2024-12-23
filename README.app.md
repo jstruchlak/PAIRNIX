@@ -37,4 +37,5 @@ Pᴀɪʀɴɪx is a modern dating application and private messaging service built
 -ngx-toastr
 -bootswatch
 -ng-gallery
+-ngx-spinner
 
