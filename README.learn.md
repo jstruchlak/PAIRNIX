@@ -37,6 +37,8 @@ a. remove -> New Terminal > API > 'dotnet ef migrations remove'
 12.Graceful Troubleshooting/Error Handling
 13.3rd Party Photo Gallery (ng-gallery)
 14.Using Route Parameters
+15.Persisting Chnages to the API
+16.Caching Data in Services
 
 # Database
 

@@ -30,6 +30,7 @@ Pᴀɪʀɴɪx is a modern dating application and private messaging service built
 -System.Identity.Model.Tokens.Jwt
 -Microsoft.AspNetCore.Authentication.JwtBearer
 -autoMapper 
+-CloudinaryDotNet
 
 # NPM Packages:
 -Bootstrap + Bootstrap/tabs
