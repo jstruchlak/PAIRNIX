@@ -26,6 +26,8 @@
 
     <!-- Dropdown for logged-in user -->
     <div class="dropdown" *ngIf="accountService.currentUser()" dropdown>
+      <img class="title" src="{{accountService.currentUser()?.photoUrl || './assets/user.png'}}"
+           alt="" srcset="">
       <a class="dropdown-toggle text-light dropdown-welcome" dropdownToggle>
         Welcome {{ accountService.currentUser()?.username | titlecase}}
       </a>
