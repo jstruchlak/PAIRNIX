@@ -8,14 +8,20 @@
   .dropdown-welcome {
     text-decoration: none;
     font-weight: bold;
-    color: #fff;
-    background: linear-gradient(to right, #3b3b4f, #1f1f28, #35383a);
     padding: 10px 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), inset 0 -2px 5px rgba(0, 0, 0, 0.2), 0 0 15px rgba(255, 255, 255, 0.2); /* Outer glow */
+    background: linear-gradient(to right, #ffffff, #989899, #ffffff); /* Gradient colors */
+    -webkit-background-clip: text; /* Clip the background to the text */
+    -webkit-text-fill-color: transparent; /* Make the text transparent to show the gradient */
     transition: all 0.3s ease;
     cursor: pointer;
-  }
-  
+}
 
-  
+
+  .title {
+    width: 40px;
+    height: 40px; 
+    display: inline;
+    border-radius: 50%; 
+    margin-right: -15px;
+}
+
