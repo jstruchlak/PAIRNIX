@@ -40,4 +40,5 @@ Pᴀɪʀɴɪx is a modern dating application and private messaging service built
 -ng-gallery
 -ngx-spinner
 -ng2-file-upload
+-ngx-bootstrap/datepicker
 

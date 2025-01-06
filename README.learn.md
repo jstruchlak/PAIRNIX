@@ -21,6 +21,7 @@
 15.Using the 'Repository' Pattern
 16.Using AutoMapper
 17.Using REST based API
+18.Server Side Validation
 
 # (Angular)
 
@@ -40,6 +41,7 @@
 14.Using Route Parameters
 15.Persisting Chnages to the API
 16.Caching Data in Services
+17.Using Reactive Forms
 
 # Database
 
