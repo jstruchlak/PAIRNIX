@@ -42,8 +42,8 @@ import {
   ɵɵtext,
   ɵɵtextInterpolate
 } from "./chunk-GPXEWCNM.js";
-import "./chunk-DEN6S46J.js";
 import "./chunk-AVNDL7SZ.js";
+import "./chunk-DEN6S46J.js";
 import "./chunk-UT3GRSIE.js";
 
 // node_modules/ngx-bootstrap/tabs/fesm2022/ngx-bootstrap-tabs.mjs
