@@ -87,12 +87,12 @@ import {
   ɵɵtextInterpolate,
   ɵɵviewQuery
 } from "./chunk-GPXEWCNM.js";
-import "./chunk-DEN6S46J.js";
 import {
   animationFrameScheduler,
   fromEvent,
   merge
 } from "./chunk-AVNDL7SZ.js";
+import "./chunk-DEN6S46J.js";
 import {
   BehaviorSubject,
   EMPTY,

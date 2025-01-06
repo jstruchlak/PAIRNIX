@@ -1,8 +1,4 @@
 import {
-  NG_VALIDATORS,
-  NG_VALUE_ACCESSOR
-} from "./chunk-4JHHRUXD.js";
-import {
   ComponentLoaderFactory,
   OnChange,
   PlacementForBs5,
@@ -11,6 +7,10 @@ import {
   parseTriggers,
   warnOnce
 } from "./chunk-VVVCWTWD.js";
+import {
+  NG_VALIDATORS,
+  NG_VALUE_ACCESSOR
+} from "./chunk-4JHHRUXD.js";
 import {
   animate,
   state,
@@ -88,10 +88,10 @@ import {
   ɵɵtextInterpolate1,
   ɵɵviewQuery
 } from "./chunk-GPXEWCNM.js";
-import "./chunk-DEN6S46J.js";
 import {
   queueScheduler
 } from "./chunk-AVNDL7SZ.js";
+import "./chunk-DEN6S46J.js";
 import {
   BehaviorSubject,
   Observable,
