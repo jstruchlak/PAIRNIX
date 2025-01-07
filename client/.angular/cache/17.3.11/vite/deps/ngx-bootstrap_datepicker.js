@@ -1,4 +1,8 @@
 import {
+  NG_VALIDATORS,
+  NG_VALUE_ACCESSOR
+} from "./chunk-4JHHRUXD.js";
+import {
   ComponentLoaderFactory,
   OnChange,
   PlacementForBs5,
@@ -7,10 +11,6 @@ import {
   parseTriggers,
   warnOnce
 } from "./chunk-VVVCWTWD.js";
-import {
-  NG_VALIDATORS,
-  NG_VALUE_ACCESSOR
-} from "./chunk-4JHHRUXD.js";
 import {
   animate,
   state,
