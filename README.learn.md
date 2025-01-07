@@ -1,7 +1,6 @@
 ### LEARNING GOALS
 
 # (.NET)
-
 1.Using dotnet CLI
 2.API Controllers and Endpoints
 3.Entity Framework
@@ -22,9 +21,10 @@
 16.Using AutoMapper
 17.Using REST based API
 18.Server Side Validation
+19.Pagination, Filtering and Sorting
+20.Deferred Execution Using IQueryable
 
 # (Angular)
-
 1.Using Angular CLI
 2.Angular Config New Application
 3.Adding NPM packages (bootstrap + font-awesome)
@@ -42,6 +42,8 @@
 15.Persisting Chnages to the API
 16.Caching Data in Services
 17.Using Reactive Forms
+18.Pagination, Filtering and Sorting
+19.Implementing Caching for Paginated Resources
 
 # Database
 

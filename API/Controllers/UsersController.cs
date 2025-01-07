@@ -19,7 +19,7 @@ public class UsersController(IUserRepository userRepository, IMapper mapper, IPh
     // async = public async Task<ActionResult<IEnumerable<AppUser>>> GetUsers()
     public async Task<ActionResult<IEnumerable<MemberDto>>> GetUsers([FromQuery] UserParams userParams)
     {
-
+        userParams.CurrentUserName = User.GetUsername();
         var users = await userRepository.GetMembersAsync(userParams);
 
 
