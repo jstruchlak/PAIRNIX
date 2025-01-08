@@ -23,6 +23,8 @@
 18.Server Side Validation
 19.Pagination, Filtering and Sorting
 20.Deferred Execution Using IQueryable
+21.Entity Framework Many to Many Relationships
+22.Configure Entities in DbContext
 
 # (Angular)
 1.Using Angular CLI
