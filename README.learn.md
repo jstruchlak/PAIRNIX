@@ -46,6 +46,8 @@
 17.Using Reactive Forms
 18.Pagination, Filtering and Sorting
 19.Implementing Caching for Paginated Resources
+20.Using Route Resolvers
+21.Using Query Params
 
 # Database
 
