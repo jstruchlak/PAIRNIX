@@ -10,7 +10,7 @@ import {
   getBsVer,
   parseTriggers,
   warnOnce
-} from "./chunk-VVVCWTWD.js";
+} from "./chunk-SQYL4E7U.js";
 import {
   animate,
   state,
@@ -88,10 +88,10 @@ import {
   ɵɵtextInterpolate1,
   ɵɵviewQuery
 } from "./chunk-GPXEWCNM.js";
+import "./chunk-DEN6S46J.js";
 import {
   queueScheduler
 } from "./chunk-AVNDL7SZ.js";
-import "./chunk-DEN6S46J.js";
 import {
   BehaviorSubject,
   Observable,

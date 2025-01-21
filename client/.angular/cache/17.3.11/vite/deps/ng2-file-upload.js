@@ -16,8 +16,8 @@ import {
   ɵɵdirectiveInject,
   ɵɵlistener
 } from "./chunk-GPXEWCNM.js";
-import "./chunk-AVNDL7SZ.js";
 import "./chunk-DEN6S46J.js";
+import "./chunk-AVNDL7SZ.js";
 import "./chunk-UT3GRSIE.js";
 
 // node_modules/ng2-file-upload/fesm2022/ng2-file-upload.mjs

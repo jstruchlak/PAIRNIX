@@ -174,6 +174,11 @@ function getBsVer() {
     isBs5: isBs5()
   };
 }
+function currentBsVersion() {
+  const bsVer = getBsVer();
+  const resVersion = Object.keys(bsVer).find((key) => bsVer[key]);
+  return BsVerions[resVersion];
+}
 function OnChange() {
   const sufix = "Change";
   return function OnChangeHandler(target, propertyKey) {
@@ -194,6 +199,29 @@ function OnChange() {
     });
   };
 }
+var Utils = class {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  static reflow(element) {
+    /* @__PURE__ */ ((bs) => bs)(element.offsetHeight);
+  }
+  // source: https://github.com/jquery/jquery/blob/master/src/css/var/getStyles.js
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  static getStyles(elem) {
+    let view = elem.ownerDocument.defaultView;
+    if (!view || !view.opener) {
+      view = win;
+    }
+    return view.getComputedStyle(elem);
+  }
+  static stackOverflowConfig() {
+    const bsVer = currentBsVersion();
+    return {
+      crossorigin: "anonymous",
+      integrity: bsVer === "bs5" ? "sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" : "sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2",
+      cdnLink: bsVer === "bs5" ? "https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" : "https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    };
+  }
+};
 var _messagesHash = {};
 var _hideMsg = typeof console === "undefined" || !("warn" in console);
 function warnOnce(msg) {
@@ -1389,8 +1417,11 @@ var ComponentLoaderFactory = class _ComponentLoaderFactory {
 
 export {
   parseTriggers,
+  win,
+  document2 as document,
   getBsVer,
   OnChange,
+  Utils,
   warnOnce,
   PlacementForBs5,
   PositioningService,
@@ -1407,4 +1438,4 @@ ngx-bootstrap/utils/fesm2022/ngx-bootstrap-utils.mjs:
    * found in the LICENSE file at https://angular.io/license
    *)
 */
-//# sourceMappingURL=chunk-VVVCWTWD.js.map
+//# sourceMappingURL=chunk-SQYL4E7U.js.map
