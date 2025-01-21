@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { inject, Injectable, signal } from '@angular/core';
+import { computed, inject, Injectable, signal } from '@angular/core';
 import { User } from '../interfaces/user';
 import { map } from 'rxjs';
 import { environment } from '../../environments/environment';
@@ -12,7 +12,20 @@ export class AccountService {
   // new constructor
   private likeService = inject(LikesService);
   baseUrl = environment.apiUrl;
+  // jwt token inside 'currentUser' as a property
   currentUser = signal<User | null>(null);
+  roles = computed (() => {
+    const user = this.currentUser();
+    if (user && user.token) {
+      // atob = decode Base64 - split = retrieve jwt payload
+      const role = JSON.parse(atob(user.token.split('.')[1])).role;
+      return Array.isArray(role) ? role : [role]
+    }
+    return []
+  })
+
+
+
   // old contructor
   constructor(private http: HttpClient) {}
 
