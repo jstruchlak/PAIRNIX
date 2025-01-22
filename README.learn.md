@@ -25,6 +25,7 @@
 20.Deferred Execution Using IQueryable
 21.Entity Framework Many to Many Relationships
 22.Configure Entities in DbContext
+23.Using .Net Identity
 
 # (Angular)
 1.Using Angular CLI
@@ -48,8 +49,8 @@
 19.Implementing Caching for Paginated Resources
 20.Using Route Resolvers
 21.Using Query Params
+22.Role Management Policies
 
 # Database
-
 1.SQLite
 2.D-Beaver Database Managment Tool

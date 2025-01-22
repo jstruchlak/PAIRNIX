@@ -28,6 +28,7 @@ public static class ApplicationServiceExtensions
             {
                 policy.AllowAnyHeader()
                       .AllowAnyMethod()
+                      .AllowCredentials()
                       .WithOrigins("http://localhost:4200", "https://localhost:4200");
             });
         });
@@ -35,17 +36,14 @@ public static class ApplicationServiceExtensions
         // JWT
         services.AddScoped<ITokenService, TokenService>();
 
-        // REPOSITORIES
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IPhotoService, PhotoService>();
         services.AddScoped<ILikesRepository, LikesReository>();
         services.AddScoped<IMessageRepository, MessageRepository>();
-
         services.AddScoped<LogUserActivity>();
-
-        // HELPERS
         services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         services.Configure<CloudinarySettings>(config.GetSection("CloudinarySettings"));
+        services.AddSignalR();
 
 
 

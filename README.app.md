@@ -36,12 +36,13 @@ Pᴀɪʀɴɪx is a modern dating application and private messaging service built
 # NPM Packages:
 -Bootstrap + Bootstrap/tabs
 -font-awesome
--ngx-toastr
 -bootswatch
+-ngx-toastr
 -ng-gallery
 -ngx-spinner
 -ng2-file-upload
 -ngx-bootstrap/datepicker
 -ngx-bootstrap/buttons
--npm install ngx-timeago
+-ngx-timeago
+-ngx-bootstrap/modal
 
