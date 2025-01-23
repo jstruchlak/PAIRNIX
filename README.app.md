@@ -34,6 +34,7 @@ Pᴀɪʀɴɪx is a modern dating application and private messaging service built
 -Microsoft.AspNetCore.Identity.EntityFrameworkCore
 
 # NPM Packages:
+-@microsoft/signalr
 -Bootstrap + Bootstrap/tabs
 -font-awesome
 -bootswatch
@@ -45,4 +46,3 @@ Pᴀɪʀɴɪx is a modern dating application and private messaging service built
 -ngx-bootstrap/buttons
 -ngx-timeago
 -ngx-bootstrap/modal
-

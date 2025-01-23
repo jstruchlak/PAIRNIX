@@ -4,12 +4,14 @@ import { User } from '../interfaces/user';
 import { map } from 'rxjs';
 import { environment } from '../../environments/environment';
 import { LikesService } from './likes.service';
+import { PresenceService } from './presence.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AccountService {
-  // new constructor
+  private http = inject(HttpClient)
+  private presenceService = inject(PresenceService)
   private likeService = inject(LikesService);
   baseUrl = environment.apiUrl;
   // jwt token inside 'currentUser' as a property
@@ -24,11 +26,6 @@ export class AccountService {
     return []
   })
 
-
-
-  // old contructor
-  constructor(private http: HttpClient) {}
-
   // Set a signal
   login(model: any) {
     return this.http.post<User>(this.baseUrl + 'account/login', model).pipe(
@@ -39,8 +36,6 @@ export class AccountService {
       })
     );
   }
-
- 
 
   register(model: any) {
     return this.http.post<User>(this.baseUrl + 'account/register', model).pipe(
@@ -57,10 +52,12 @@ export class AccountService {
     localStorage.setItem('user', JSON.stringify(user));
     this.currentUser.set(user);
     this.likeService.getLikesIds();
+    this.presenceService.createHubConnection(user)
   }
 
   logout() {
     localStorage.removeItem('user');
     this.currentUser.set(null);
+    this.presenceService.stopHubConnection();
   }
 }
