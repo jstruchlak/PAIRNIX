@@ -8,16 +8,16 @@ import {
   warnOnce
 } from "./chunk-3LKIUJHN.js";
 import {
+  NG_VALIDATORS,
+  NG_VALUE_ACCESSOR
+} from "./chunk-DYDVIEAJ.js";
+import {
   animate,
   state,
   style,
   transition,
   trigger
 } from "./chunk-ETTU7AP5.js";
-import {
-  NG_VALIDATORS,
-  NG_VALUE_ACCESSOR
-} from "./chunk-DYDVIEAJ.js";
 import {
   AsyncPipe,
   CommonModule,
@@ -88,10 +88,10 @@ import {
   ɵɵtextInterpolate1,
   ɵɵviewQuery
 } from "./chunk-2TDQURWO.js";
-import "./chunk-QGLJNTRX.js";
 import {
   queueScheduler
 } from "./chunk-K22RCIQU.js";
+import "./chunk-QGLJNTRX.js";
 import {
   BehaviorSubject,
   Observable,
