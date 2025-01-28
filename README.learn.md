@@ -26,6 +26,7 @@
 21.Entity Framework Many to Many Relationships
 22.Configure Entities in DbContext
 23.Using .Net Identity
+24.Using SignalR in API (live chat capabilities)
 
 # (Angular)
 1.Using Angular CLI
@@ -50,6 +51,7 @@
 20.Using Route Resolvers
 21.Using Query Params
 22.Role Management Policies
+23.Using SignalR in Angular (live chat capabilities)
 
 # Database
 1.SQLite
